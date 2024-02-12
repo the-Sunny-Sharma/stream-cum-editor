@@ -1,0 +1,47 @@
+.compiler-head {
+  height: 40px;
+  width: 100%;
+  background-color: #f0f8ff;
+  position: absolute;
+  top: 0;
+}
+
+.output-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 80px;
+  background-color: grey;
+  padding: 7px;
+}
+
+.input-container,
+.output-container {
+  height: 120px;
+  width: 45%;
+  color: white;
+}
+
+.input-container {
+  background-color: rgb(0, 0, 0);
+}
+
+.output-container {
+  background-color: #000000;
+}
+
+.code-editor-container {
+  margin-top: 40px;
+}
+
+.CodeMirror {
+  font-size: 16px;
+  line-height: 1.1;
+  padding-top: 20px;
+  height: 442px;
+  margin-top: -20px;
+}

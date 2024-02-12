@@ -1,0 +1,153 @@
+/* styling for header */
+
+.unity-header {
+  height: 60px;
+  background-color: #1339c1;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-forth-opt {
+  width: 200px;
+  margin-right: 30px;
+}
+
+.back-forth-opt ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-forth-opt ul li {
+  list-style-type: none;
+}
+
+.bf-btn {
+  background-color: transparent;
+  color: white;
+  font-size: 1.2em;
+  height: 40px;
+  width: 90px;
+  border: 2px solid white;
+  border-radius: 12px;
+  padding: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bf-btn:hover {
+  background-color: rgb(19, 57, 150);
+}
+
+.split-div {
+  height: 100%;
+  width: 60%;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* right screen host streaming */
+.left-container {
+  left: 0;
+  background-color: #111;
+}
+
+.video-stream-container {
+  height: 90%;
+}
+
+.host-screen {
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-stream {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.facecam {
+  width: 250px;
+  height: auto;
+  display: block;
+}
+
+/* left screen user compiler */
+.right-container {
+  height: 100%;
+  width: 40%;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  padding-top: 20px;
+  right: 0;
+  /* background-color: red; */
+}
+
+.live-chat {
+  color: white;
+}
+
+/* Chat positioning */
+.live-chat {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 30px;
+  margin-bottom: 100px;
+  width: 250px;
+  height: 200px;
+  background-color: transparent;
+  padding: 10px;
+  z-index: 10;
+  text-shadow: 2px 2px black;
+  font-weight: 600;
+  font-size: 1em;
+  overflow-x: hidden;
+}
+
+.live-chat::-webkit-scrollbar {
+  display: none;
+}
+/* Host facecam positioning */
+.host-facecam {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 30px;
+  margin-bottom: 100px;
+  width: 250px;
+  z-index: 10;
+}
+
+.overflow-parent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.chats {
+  margin-bottom: 5px;
+}
+
+.chats-host {
+  background-color: #b5c11371;
+  border-radius: 4px;
+}
+
+.chat-by {
+  font-size: 1.2em;
+}
+
+.student-chat {
+  text-shadow: 2px 2px red;
+}
+
+.host-chat {
+  text-shadow: 2px 2px #1339c1;
+}

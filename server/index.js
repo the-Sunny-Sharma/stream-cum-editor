@@ -3,6 +3,8 @@ const cors = require("cors");
 const { getToken } = require("./zegoServerAssistant");
 const { generateToken04 } = require("./zegoServerAssistant");
 
+const { MongoClient } = require("mongodb");
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -126,6 +128,28 @@ app.post("/compile", function (req, res) {
   } catch (e) {
     console.log("error");
   }
+});
+
+// jo krna hain bss yaha se
+
+app.post("/saveDetails", (req, res) => {
+  const url = "mongodb://0.0.0.0:27017";
+  const client = new MongoClient(url);
+  const db = client.db("testingDB");
+  const coll = db.collection("details");
+  const record = {
+    name: req.body.name,
+    role: req.body.role,
+    username: req.body.username,
+    password: req.body.password,
+  };
+  coll
+    .insertOne(record)
+    .then((result) => {
+      res.send(result);
+      console.log(name, password, role, username);
+    })
+    .catch((error) => res.send(error));
 });
 
 app.listen(9000, () => {
